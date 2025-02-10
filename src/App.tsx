@@ -3,7 +3,7 @@ import CreatePoll from "./components/CreatePoll"
 import PollList from "./components/PollList"
 import Poll from "./components/Poll"
 import Results from "./components/Results"
-
+import EditPoll from "./components/EditPoll"
 export default function App() {
   return (
     <Router>
@@ -14,6 +14,7 @@ export default function App() {
             <Route path="/create" element={<CreatePoll />} />
             <Route path="/poll/:id" element={<Poll />} />
             <Route path="/results/:id" element={<Results />} />
+            <Route path="/edit/:id" element={<EditPoll />} />
           </Routes>
         </main>
       </div>

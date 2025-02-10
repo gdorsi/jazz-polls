@@ -34,14 +34,18 @@ export default function PollList() {
                 >
                   View Results
                 </Link>
-
                 <Link
                   to={`/poll/${poll.id}`}
                   className="text-blue-500 hover:text-blue-700"
                 >
                   Vote
                 </Link>
-
+                <Link
+                  to={`/edit/${poll.id}`}
+                  className="text-blue-500 hover:text-blue-700"
+                >
+                  Edit
+                </Link>
                 <button
                   onClick={() => duplicatePoll(poll)}
                   className="text-blue-500 hover:text-blue-700"
