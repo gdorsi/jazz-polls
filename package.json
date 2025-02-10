@@ -1,0 +1,42 @@
+{
+  "name": "polls",
+  "private": true,
+  "version": "0.0.40",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "format-and-lint": "biome check .",
+    "format-and-lint:fix": "biome check . --write"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "jazz-react": "latest",
+    "jazz-tools": "latest",
+    "lucide-react": "^0.274.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.16.0",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "postcss": "^8.4.27",
+    "tailwindcss": "^3.4.15",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.11"
+  },
+  "resolutions": {
+    "cojson": "https://pkg.pr.new/garden-co/jazz/cojson@334f6cf",
+    "cojson-transport-ws": "https://pkg.pr.new/garden-co/jazz/cojson-transport-ws@334f6cf",
+    "jazz-react": "https://pkg.pr.new/garden-co/jazz/jazz-react@334f6cf",
+    "jazz-react-core": "https://pkg.pr.new/garden-co/jazz/jazz-react-core@334f6cf",
+    "jazz-tools": "https://pkg.pr.new/garden-co/jazz/jazz-tools@334f6cf"
+  },
+  "packageManager": "pnpm@9.15.4+sha256.9bee59c7313a216722c079c1e22160dea7f88df4e0c3450b1d7b01b882336c6a"
+}
