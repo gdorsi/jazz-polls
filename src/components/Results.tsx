@@ -3,7 +3,7 @@
 import { Option, Poll } from "@/schema";
 import { useCoState } from "jazz-react";
 import { ID } from "jazz-tools";
-import { Link, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 
 
 export default function Results() {
