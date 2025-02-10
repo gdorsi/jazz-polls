@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import { HashRouter as Router, Route, Routes } from "react-router-dom"
 import CreatePoll from "./components/CreatePoll"
 import PollList from "./components/PollList"
 import Poll from "./components/Poll"
