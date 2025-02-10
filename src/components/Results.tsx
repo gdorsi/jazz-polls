@@ -28,7 +28,6 @@ export default function Results() {
 
   return (
     <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-      <Link to={`/poll/${id}`} className="text-blue-500 hover:text-blue-700">Voting page</Link>
       <h2 className="text-2xl font-bold mb-4">Results: {poll.title}</h2>
       <div className="space-y-4">
         {poll.options.map((option) => {
