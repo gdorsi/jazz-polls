@@ -3,12 +3,15 @@ import PollForm from "./PollForm"
 
 export default function CreatePoll() {
   const { me } = useAccount({
-    root: {
-      polls: [],
-      pollDraft: {
-        options: [{}]
-      }
-    }
+    resolve: {
+      root: {
+        pollDraft: {
+          options: {
+            $each: true,
+          },
+        },
+      },
+    },
   })
 
   const pollDraft = me?.root.pollDraft

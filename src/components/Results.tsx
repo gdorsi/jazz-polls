@@ -10,8 +10,14 @@ export default function Results() {
   const { id } = useParams<{ id: ID<Poll> }>();
 
   const poll = useCoState(Poll, id, {
-    options: [{}],
-    votes: [{}],
+    resolve: {
+      options: {
+        $each: true,
+      },
+      votes: {
+        $each: true,
+      },
+    },
   });
 
   if (!poll) {

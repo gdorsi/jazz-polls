@@ -1,15 +1,19 @@
 import { createOption, Option, Poll, resetPollDraft } from "@/schema"
 import { useAccount } from "jazz-react"
-import { DeeplyLoaded } from "jazz-tools"
+import { Resolved } from "jazz-tools"
 import type React from "react"
 import { useNavigate } from "react-router-dom"
 
-export default function PollForm({ poll, isCreate }: { poll: DeeplyLoaded<Poll, { options: [{}] }>, isCreate: boolean }) {
-  const { me } = useAccount({
-    root: {
-      polls: [],
-    }
-  })
+export default function PollForm({ poll, isCreate }: { poll: Resolved<Poll, { options: { $each: true } }>, isCreate: boolean }) {
+    const { me } = useAccount({
+      resolve: {
+        root: {
+          polls: {
+            $each: true,
+          },
+        },
+      },
+    })
 
   const navigate = useNavigate()
 

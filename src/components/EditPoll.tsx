@@ -8,7 +8,11 @@ export default function EditPoll() {
   const { id } = useParams<{ id: ID<Poll> }>();
 
   const poll = useCoState(Poll, id, {
-    options: [{}],
+    resolve: {
+      options: {
+        $each: true,
+      },
+    },
   });
 
   if (!poll) {

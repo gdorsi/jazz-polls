@@ -7,8 +7,12 @@ export default function PollComponent() {
   const { id } = useParams<{ id: ID<Poll> }>();
 
   const poll = useCoState(Poll, id, {
-    options: [{}],
-    votes: [],
+    resolve: {
+      options: {
+        $each: true,
+      },
+      votes: true,
+    },
   });
 
   if (!poll) {

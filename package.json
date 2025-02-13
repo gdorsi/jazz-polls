@@ -13,8 +13,8 @@
   "dependencies": {
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
-    "jazz-react": "latest",
-    "jazz-tools": "latest",
+    "jazz-react": "^0.10.0",
+    "jazz-tools": "^0.10.0",
     "lucide-react": "^0.274.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -33,11 +33,8 @@
     "vite": "^6.0.11"
   },
   "resolutions": {
-    "cojson": "https://pkg.pr.new/garden-co/jazz/cojson@334f6cf",
-    "cojson-transport-ws": "https://pkg.pr.new/garden-co/jazz/cojson-transport-ws@334f6cf",
-    "jazz-react": "https://pkg.pr.new/garden-co/jazz/jazz-react@334f6cf",
-    "jazz-react-core": "https://pkg.pr.new/garden-co/jazz/jazz-react-core@334f6cf",
-    "jazz-tools": "https://pkg.pr.new/garden-co/jazz/jazz-tools@334f6cf"
+    "jazz-react": "https://pkg.pr.new/garden-co/jazz/jazz-react@706ca62feb3698ae1899cf52cc14056cc43fdddf",
+    "jazz-tools": "https://pkg.pr.new/garden-co/jazz/jazz-tools@706ca62feb3698ae1899cf52cc14056cc43fdddf"
   },
   "packageManager": "pnpm@9.15.4+sha256.9bee59c7313a216722c079c1e22160dea7f88df4e0c3450b1d7b01b882336c6a"
 }

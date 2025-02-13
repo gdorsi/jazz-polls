@@ -55,7 +55,9 @@ export function createPollDraft() {
 
 export async function resetPollDraft() {
   const { root } = await JazzAccount.getMe().ensureLoaded({
-    root: {}
+    resolve: {
+      root: true,
+    },
   })
 
   root.pollDraft = createPollDraft()
@@ -63,13 +65,21 @@ export async function resetPollDraft() {
 
 export async function duplicatePoll(poll: Poll) {
   const { root } = await JazzAccount.getMe().ensureLoaded({
-    root: {
-      polls: []
-    }
+    resolve: {
+      root: {
+        polls: {
+          $each: true,
+        },
+      },
+    },
   })
 
   const { options } = await poll.ensureLoaded({
-    options: [],
+    resolve: {
+      options: {
+        $each: true,
+      },
+    },
   })
 
   const everyoneReader = Group.create();

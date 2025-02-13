@@ -6,11 +6,15 @@ import CreatePoll from "./CreatePoll";
 import { duplicatePoll } from "@/schema";
 
 export default function PollList() {
-  const { me } = useAccount({
-    root: {
-      polls: [{}],
-    },
-  });
+    const { me } = useAccount({
+      resolve: {
+        root: {
+          polls: {
+            $each: true,
+          },
+        },
+      },
+    });
 
   if (!me) {
     return null;
