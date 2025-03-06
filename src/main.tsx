@@ -21,6 +21,6 @@ createRoot(document.getElementById("root")!).render(
 
 declare module "jazz-react" {
   interface Register {
-    Account: JazzAccount;
+      Account: JazzAccount;
   }
 }

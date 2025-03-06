@@ -1,4 +1,4 @@
-import { useCoState } from "jazz-react"
+import { useAccount, useCoState } from "jazz-react"
 import PollForm from "./PollForm"
 import { Poll } from "@/schema";
 import { ID } from "jazz-tools";
@@ -15,8 +15,14 @@ export default function EditPoll() {
     },
   });
 
+  const { me } = useAccount()
+
   if (!poll) {
     return null;
+  }
+
+  if (!me.canWrite(poll)) {
+    return <div>You are not authorized to edit this poll</div>;
   }
 
   return <PollForm poll={poll} isCreate={false} />
